@@ -9,6 +9,15 @@ export class FoodService {
 
   constructor() { }
 
+
+
+
+  getFoodById(id:number):Food{
+    return this.getAll().find(food=>food.id==id)!
+  }
+
+
+
   getAllTags():Tag[]{
     return [
       { name: 'All', count: 14 },
@@ -22,10 +31,7 @@ export class FoodService {
     ]
 
   }
-
-
     //statement?doJob1:doJob2
-
   getAllFoodsByTag(tag:string):Food[]{
     return tag=='All'?
     this.getAll(): //Job1

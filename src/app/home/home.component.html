@@ -2,7 +2,7 @@
 <app-tags></app-tags>
 <ul>
   <li *ngFor="let food of foods">
-    <a href="">
+    <a routerLink="/food/{{food.id}}">
       <img src="{{ food.imageUrl }}" alt="{{ food.name }}" />
       <div class="content">
         <div class="name">
